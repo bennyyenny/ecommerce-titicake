@@ -1,0 +1,315 @@
+*::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* navbar */
+
+.main--nav-desktop {
+  display: grid;
+  grid-template-columns: 0.75fr 1.5fr 0.75fr;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.nav--logo img {
+  width: 10rem;
+}
+
+.main--nav-desktop ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% auto;
+  width: 80%;
+  padding: 0;
+}
+
+.main--nav-mobile ul {
+  list-style-type: none;
+}
+
+.main--nav-desktop a,
+.main--nav-mobile a {
+  text-decoration: none;
+  color: #424242;
+}
+
+.main--nav a:hover {
+  color: #edb4ae;
+}
+
+.nav--cart {
+  padding-right: 5%;
+}
+
+.nav--cart button {
+  position: relative;
+  float: right;
+}
+
+.cart--btn {
+  background: none;
+  border: none;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar > .container {
+  margin: 0;
+}
+
+.main--nav-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 490px) {
+  .main--nav-desktop {
+    display: none;
+  }
+  .main--nav-mobile {
+    display: block;
+  }
+  .cart--btn {
+    margin-right: -5rem;
+  }
+}
+
+/* Homepage */
+
+.home--container {
+  max-width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home--title {
+  color: white;
+  font-size: 8rem;
+  text-shadow: 1px 1px 10px black;
+}
+
+@media screen and (max-width: 450px) {
+  .home--title {
+    font-size: 4rem;
+  }
+}
+
+/* ProductBox */
+
+.product--box {
+  width: 100%;
+}
+
+.product--box img {
+  width: 100%;
+  height: auto;
+}
+
+.product--box h5 {
+  margin-top: 0.5rem;
+}
+
+/* ShopAll */
+
+.all--products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  margin: 0 10%;
+}
+
+@media screen and (max-width: 420px) {
+  .all--products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ProductBuy */
+
+@media (min-width: 768px) {
+  .buy--container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5%;
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .buy--container {
+    padding: 5%;
+  }
+}
+
+.buy--image img {
+  width: 100%;
+}
+
+.buy--content {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-to-cart, 
+ .cart--checkout button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background: #edb4ae;
+  font-size: 1.5rem;
+}
+
+.add-to-cart:active {
+  background-color: grey;
+}
+
+.buy--container h1 {
+  margin: 5% 0;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.buy--container h2 {
+  margin: 0;
+}
+
+.buy--container h2 {
+  margin: 0;
+}
+
+.buy--container h2 {
+  margin: 10% 0;
+}
+
+/* CartItem */
+
+.item--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 5%;
+}
+
+.item--container img {
+  width: 100%;
+}
+
+.item--quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #424242;
+}
+
+.item--quantity button,
+.item--quantity p {
+  margin: 0;
+  padding: 0;
+}
+
+.item--quantity p {
+  margin: 0 2.5rem;
+}
+
+.item--quantity button {
+  border: none;
+  background: white;
+}
+
+/* Cart */
+
+.cart--checkout {
+  position: absolute;
+  bottom: 0;
+  margin: 10% 0;
+  width: 100%;
+}
+
+.cart--checkout button {
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.cart--checkout span {
+  float: right;
+  margin-right: 4rem;
+}
+
+/* Location */
+
+.location--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  width: 80%;
+  height: 40vh;
+}
+
+.location--info {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.location--address {
+  margin: 0 10%;
+}
+
+.location--address,
+.location--hours {
+  line-height: 0.5rem;
+}
+
+@media screen and (max-width: 420px) {
+  .location--info {
+    flex-direction: column;
+    margin-left: 5rem;
+  }
+
+  .location--address {
+    margin: 1rem 0;
+  }
+}
+
+/* About */
+
+.about--picture {
+  width: 100%;
+}
+
+.about--container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  column-gap: 3rem;
+  padding: 5rem;
+}
+
+@media screen and (max-width: 450px) {
+  .about--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    row-gap: 1rem;
+  }
+}
