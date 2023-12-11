@@ -23,7 +23,7 @@ export default function Cart() {
             </div>
             <div class="offcanvas-body">
                 <div>
-                    <p>YOUR ORDER({totalCartItems} ITEM{totalCartItems == 1 ? "" : "S"})</p>
+                    <p>YOUR ORDER Bob({totalCartItems} ITEM{totalCartItems == 1 ? "" : "S"})</p>
                     {inCart}
                 </div>
                 <div className="cart--checkout">
